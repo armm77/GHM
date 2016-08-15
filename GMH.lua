@@ -164,15 +164,15 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- BattlegroundScript
 function BGStart()
-    outSAY("battleground startbg");
+    outSAY("battleground start");
 end
 
 function BGForceStart()
-    outSAY("battleground forcestart");
+    outSAY("battleground forceinitqueue");
 end
 
 function BGInfo()
-    outSAY("battleground bginfo");
+    outSAY("battleground info");
 end
 
 function BGLeave()
@@ -1085,7 +1085,7 @@ function GMH_WAnnounce(msg)
 end
 
 function GMH_GMAnnounce(msg)
-    outSAY("gmannounce "..msg);
+    outSAY("gm announce "..msg);
 end
 
 function GMH_RecallPort(msg)
@@ -1152,7 +1152,7 @@ function GMH_ShowMessage(msg)
 ShowMessage(msg, "FFFFFF")
 end
 
-if select(4, GetBuildInfo()) == 30100 then
+if select(4, GetBuildInfo()) == 30300 then
     SLASH_GMHRELOAD1 = "/reload"
     SlashCmdList["GMHRELOAD"] = 
     function()

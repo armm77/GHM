@@ -3,7 +3,7 @@
   <Frame name="EventForm" hidden="true" parent="UIParent" movable="true" resizable="true" enableKeyboard="true" clampedToScreen="true">
     <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508883-59c2-4f83-ae10-27aaad48391b" />-->
     <Size>
-      <AbsDimension x="148" y="180" />
+      <AbsDimension x="148" y="238" />
     </Size>
     <Anchors>
       <Anchor point="RIGHT" relativeTo="UIParent">
@@ -63,6 +63,78 @@
       </Layer>
     </Layers>
     <Frames>
+      <Button name="EVENT_RESET" text="Reset">
+        <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
+        <Size>
+          <AbsDimension x="100" y="22" />
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="25" y="-138" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>if EventID:GetNumLetters() &lt; 1 then ShowMessage("Please complete the required fields!"); else outSAY("event reset "..EventID:GetText()); EventID:ClearFocus(); end</OnClick>
+        </Scripts>
+        <NormalTexture file="Interface\Buttons\UI-Panel-Button-Up">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </NormalTexture>
+        <PushedTexture file="Interface\Buttons\UI-Panel-Button-Down">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </PushedTexture>
+        <DisabledTexture file="Interface\Buttons\UI-Panel-Button-Disabled">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </DisabledTexture>
+        <HighlightTexture file="Interface\Buttons\UI-Panel-Button-Highlight" alphaMode="ADD">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </HighlightTexture>
+        <ButtonText name="$parentText">
+          <FontHeight>
+            <AbsValue val="10" />
+          </FontHeight>
+        </ButtonText>
+        <NormalFont style="GameFontNormal" />
+        <HighlightFont style="GameFontHighlight" />
+        <DisabledFont style="GameFontDisable" />
+      </Button>
+      <Button name="EVENT_RELOAD" text="Reload">
+        <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
+        <Size>
+          <AbsDimension x="100" y="22" />
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="25" y="-166" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>outSAY("event reload");</OnClick>
+        </Scripts>
+        <NormalTexture file="Interface\Buttons\UI-Panel-Button-Up">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </NormalTexture>
+        <PushedTexture file="Interface\Buttons\UI-Panel-Button-Down">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </PushedTexture>
+        <DisabledTexture file="Interface\Buttons\UI-Panel-Button-Disabled">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </DisabledTexture>
+        <HighlightTexture file="Interface\Buttons\UI-Panel-Button-Highlight" alphaMode="ADD">
+          <TexCoords left="0" right="0.625" top="0" bottom="0.6875" />
+        </HighlightTexture>
+        <ButtonText name="$parentText">
+          <FontHeight>
+            <AbsValue val="10" />
+          </FontHeight>
+        </ButtonText>
+        <NormalFont style="GameFontNormal" />
+        <HighlightFont style="GameFontHighlight" />
+        <DisabledFont style="GameFontDisable" />
+      </Button>
       <EditBox name="EventID" enableMouse="true">
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508887-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
@@ -163,7 +235,7 @@
           </Layer>
         </Layers>
       </Frame>
-      <Button name="EVENT_OFF" text="OFF">
+      <Button name="EVENT_STOP" text="Stop">
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
           <AbsDimension x="48" y="22" />
@@ -176,7 +248,7 @@
           </Anchor>
         </Anchors>
         <Scripts>
-          <OnClick>if EventID:GetNumLetters() &lt; 1 then ShowMessage("Please complete the required fields!"); 
+          <OnClick>if EventID:GetNumLetters() &lt; 1 then ShowMessage("Please complete the required fields!");
 else outSAY("event stop "..EventID:GetText()); EventID:ClearFocus(); end
 </OnClick>
         </Scripts>
@@ -201,7 +273,7 @@ else outSAY("event stop "..EventID:GetText()); EventID:ClearFocus(); end
         <HighlightFont style="GameFontHighlight" />
         <DisabledFont style="GameFontDisable" />
       </Button>
-      <Button name="EVENT_ON" text="ON">
+      <Button name="EVENT_START" text="START">
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
           <AbsDimension x="48" y="22" />
@@ -246,7 +318,7 @@ else outSAY("event stop "..EventID:GetText()); EventID:ClearFocus(); end
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="25" y="-139" />
+              <AbsDimension x="25" y="-194" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -314,7 +386,8 @@ else outSAY("event stop "..EventID:GetText()); EventID:ClearFocus(); end
       </Button>
     </Frames>
     <Scripts>
-      <OnLoad>GMHelperOnLoad(self)</OnLoad>
+      <OnLoad>GMHelperOnLoad(self)
+</OnLoad>
       <OnEvent>TeleEvent()
 </OnEvent>
       <OnDragStart>self:StartMoving()
