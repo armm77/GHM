@@ -1,9 +1,9 @@
-## Interface: 30300
+## Interface: 40300
 ## Title: |cFF00FF00GMH (GameMaster's Helper) |r
 ## Version: 1.1.3
 ## Notes: An addon to manage GM commands in an AscEmu based World of Warcraft private server.
 ## URL: https://github.com/armm77
-## X-Revision: 281
+## X-Revision: 282
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: gmhview,TicketChannel,TicketPassword,savedannmsg,savedannflag,GMH_ShowOnLoad

@@ -486,18 +486,18 @@ function CheatStatus()
 end
 
 function CheatUpdate()
-    if(FlyCheck:GetChecked()) then a = "on"; else a = "off"; end--fly
-    outSAY("cheat fly "..a);
-    if(GodCheck:GetChecked()) then a = "on"; else a = "off"; end--god
-    outSAY("cheat god "..a);
     if(NCDCheck:GetChecked()) then a = "on"; else a = "off"; end--cooldown
     outSAY("cheat cooldown "..a);
     if(NCTCheck:GetChecked()) then a = "on"; else a = "off"; end--casttime
     outSAY("cheat casttime "..a);
     if(PowCheck:GetChecked()) then a = "on"; else a = "off"; end--power
     outSAY("cheat power "..a);
+    if(FlyCheck:GetChecked()) then a = "on"; else a = "off"; end--fly
+    outSAY("cheat fly "..a);
+    if(GodCheck:GetChecked()) then a = "on"; else a = "off"; end--god
+    outSAY("cheat god "..a);
     if(AuraCheck:GetChecked()) then a = "on"; else a = "off"; end--stack
-    outSAY("cheat stack "..a);
+    outSAY("cheat aurastack "..a);
     if(TrigCheck:GetChecked()) then a = "on"; else a = "off"; end--triggers
     outSAY("cheat triggerpass "..a);
 end 
@@ -910,8 +910,10 @@ function LearnRiding()
     outSAY("char learn 33388");--Apprentice Riding
     outSAY("char learn 33391");--Journeyman Riding
     outSAY("char learn 34090");--Expert Riding
-    outSAY("char learn 34091");--Artisan Riding
+    outSAY("char learn 90267");--Flight Master's License
     outSAY("char learn 54197");--Cold Weather Flying
+    outSAY("char learn 34091");--Artisan Riding
+    outSAY("char learn 90265");--Master Riding
     outSAY("char add item 32458"); -- Ashes of Al'ar
     outSAY("char add item 43962"); -- Reins of the White Polar Bear
     outSAY("char add item 49290"); -- Magic Rooster Egg

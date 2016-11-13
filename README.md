@@ -1,4 +1,4 @@
-## The version in here is Patch 3.3.5 AscEmu Server
+## The version in here is Patch 4.3.4 AscEmu Server
 
 ## Install
 
