@@ -910,10 +910,8 @@ function LearnRiding()
     outSAY("char learn 33388");--Apprentice Riding
     outSAY("char learn 33391");--Journeyman Riding
     outSAY("char learn 34090");--Expert Riding
-    outSAY("char learn 90267");--Flight Master's License
-    outSAY("char learn 54197");--Cold Weather Flying
     outSAY("char learn 34091");--Artisan Riding
-    outSAY("char learn 90265");--Master Riding
+    outSAY("char learn 54197");--Cold Weather Flying
     outSAY("char add item 32458"); -- Ashes of Al'ar
     outSAY("char add item 43962"); -- Reins of the White Polar Bear
     outSAY("char add item 49290"); -- Magic Rooster Egg
